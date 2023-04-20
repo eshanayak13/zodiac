@@ -1,0 +1,140 @@
+"""
+Name: zodiac.py
+Author: Esha Nayak
+Created: 2/2/23
+Purpose: Zodiac game
+"""
+#pip install rich
+#Import console for console printing
+from rich.console import Console
+#import panel for title displays
+from rich.panel import Panel
+#Initialize rich.console
+console = Console()
+#Create constants for date of births
+
+January = 1
+Febraury = 2
+March = 3
+April = 4
+May = 5
+June = 6
+July = 7
+August = 8
+September = 9
+October = 10
+November = 11
+December = 12
+
+
+#-----------------------------INPUT---------------------------------------#
+
+#Get input from user
+month = int(input("Please enter the number of the month you were born in: "))
+day = int(input("Please enter the day you were born: "))
+
+still_running = "y"
+
+
+#------------------------CALCULATIONS-------------------------------------#
+while still_running == "y":
+    #Assigning each date of Birth to a Zodiac sign
+    if month == 12:
+        sign = 'Sagittarius' if (day<22) else 'capricorn'
+        print("Sagittarians are on a perpetual quest for knowledge, which makes them incredible storytellers, entertainers, and creatives. ")
+        print("They're fun, playful, and extremely philosophical")
+        if sign == 'Sagittarius':
+            element = print("Your element is Fire!")
+        else:
+            element = print("Your element is Earth!")
+        
+    elif month == 1:
+        sign = 'Capricorn' if (day<20) else 'Aquarius'
+        print("Capricorns are relentless: They are determined to overcome whatever stands in their way.")
+        print("They have big-picture, long-term goals")
+        if sign == 'Capricorn':
+            element = print("Your element is Fire!")
+        else:
+            element = print("Your element is Air!")
+    elif month == 2:
+        sign = 'Aquarius' if (day<20) else 'Pisces'
+        print("You're progressive, independent, intelligent, unique, and idealistic.")
+        if sign == 'Aquarius':
+            element = print("Your element is Air!")
+        else:
+            element = print("Your element is Water!")
+    elif month == 3:
+        sign = 'Pisces' if (day<20) else 'Aries'
+        print("Pisces are highly creative and imaginative")
+        if sign == 'Pisces':
+            element = print("Your element is Water!")
+        else:
+            element = print("Your element is Earth!")
+    elif month ==4:
+        sign = 'Aries' if (day<20) else 'Taurus'
+        print("You're bold and ambitious, you dive in headfirst into even the most challenging situations-")
+        print("but you make sure you always come out on top!")
+        if sign == 'Aries':
+            element = print("Your element is Fire!")
+
+    elif month ==5:
+        sign = 'Taurus' if (day<20) else 'Gemini'
+        print("You are willing to see another point of view, but they won't flip-flop on an opinion just to make someone else happy.")
+        if sign == 'Taurus':
+            element = print("Your element is Earth!")
+        else:
+            element = print("Your element is Air!")
+        
+    elif month ==6:
+        sign = 'Gemini' if (day<20) else 'Cancer'
+        print("Spontaneous, playful, and adorably erratic,")
+        print("You are driven by your insatiable curiosity.")
+        if sign == 'Gemini':
+            element = print("Your element is Air!")
+        else:
+            element = print("Your element is Water!")
+    elif month ==7:
+        sign = 'Cancer' if (day<20) else 'Leo'
+        print("Their personality can be quite complicated, but deep inside they are conservative and home-loving people")
+        if sign == 'Cancer':
+            element = print("Your element is Water!")
+        else:
+            element = print("Your element is Fire!")
+    elif month ==8:
+        sign = 'Leo' if (day<20) else 'Virgo'
+        print("Bold, intelligent, warm, and courageous, fire sign Leo is a natural leader of the Zodiac, ready to blaze a trail, vanquish injustice, and make a name for themselves along the way.")
+        if sign == 'Leo':
+            element = print("Your element is Fire!")
+        else:
+            element = print("Your element is Earth!")
+    elif month ==9:
+        sign = 'Virgo' if (day<20) else 'Libra'
+        print("A Virgo won't spill secrets right away, and it's important to earn a Virgo's trust. But once you do, that Virgin will be a friend for life.")
+        if sign == 'Virgo':
+            element = print("Your element is Earth!")
+        else:
+            element = print("Your element is Air!")
+    elif month == 10:
+        sign = 'Libra' if (day<20) else 'Scorpio'
+        print("Balance, harmony, and justice define Libra energy.")
+        if sign == 'Libra':
+            element = print("Your element is Air!")
+        else:
+            element = print("Your element is Water!")
+    elif month == 10:
+        sign = 'Scorpio' if (day<20) else 'Sagittarius'
+        print("Scorpios are at best when that intrinsic intensity is applied to deep, soulful connections with friends and lovers.")
+        if sign == 'Scorpio':
+            element = print("Your element is Water!")
+        else:
+            element = print("Your element is Fire!")
+    break
+
+#--------------------------DISPLAY RESULTS-----------------------------#
+#Display results
+print(f"Your astrological sign is: {sign}")
+
+if still_running == 'y':
+   answer = (input("Another sign? Press y for yes and n for no: "))
+else:
+    exit
